@@ -13,4 +13,4 @@ function alert1() {
     alert({value1});
 };
 
-ReactDOM.render(<Main />, document.getElementById('app'));
+ReactDOM.render(<Main />, document.getElementById("app"));
