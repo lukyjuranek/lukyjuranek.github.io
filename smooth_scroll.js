@@ -17,10 +17,18 @@ $(document).ready(function(){
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
             }, 800, function(){
-
                 // Add hash (#) to URL when done scrolling (default click behavior)
                 window.location.hash = hash;
             });
         }  // End if
+    });
+});
+
+// HIDE NAVBAR IN COLLAPSED MODE !!!!!!!!!!!!!
+$(function() {
+    $('.nav a').on('click', function(){
+        if($('.navbar-toggle').css('display') !='none'){
+            $('.navbar-toggle').trigger( "click" );
+        }
     });
 });

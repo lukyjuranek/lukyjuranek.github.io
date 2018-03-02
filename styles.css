@@ -1,6 +1,11 @@
+.section {padding-left: 3%;}
 #section1 {padding-top:50px;height:800px;color: #fff; background-color: #1E88E5;}
 #section2 {padding-top:50px;height:800px;color: #fff; background-color: #673ab7;}
 #section3 {padding-top:50px;height:800px;color: #fff; background-color: #ff9800;}
 
 body {position: relative;}
-.navbar-inverse {border-color:transparent;}
+.navbar-inverse {
+    border-color: transparent;
+    border-width: 0px;
+}
+.navbar-brand {font-size: 25px;}
