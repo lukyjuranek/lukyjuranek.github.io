@@ -3,7 +3,7 @@ $(document).ready(function(){
     $('body').scrollspy({target: ".navbar", offset: 50});
 
     // Add smooth scrolling on all links inside the navbar
-    $("#myNavbar a").on('click', function(event) {
+    $("#collapsibleNavbar a").on('click', function(event) {
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
             // Prevent default anchor click behavior
@@ -24,11 +24,11 @@ $(document).ready(function(){
     });
 });
 
-// HIDE NAVBAR IN COLLAPSED MODE !!!!!!!!!!!!!
+// HIDE NAVBAR IN COLLAPSED MODE AFTER CLICKING !!!!!!!!!!!!!
 $(function() {
-    $('.nav a').on('click', function(){
-        if($('.navbar-toggle').css('display') !='none'){
-            $('.navbar-toggle').trigger( "click" );
+    $('.navbar a').on('click', function(){
+        if($('.navbar-toggler').css('display') !='none'){
+            $('.navbar-toggler').trigger( "click" );
         }
     });
 });
