@@ -18,10 +18,10 @@
         <div class="container mx-auto flex items-center justify-between">
             <div class="text-left"><img class="h-10 w-10" src="img/logo.png" alt=""></div>
             <div class="text-right hidden md:block">
-                <a href="" class="ml-8">About me</a>
-                <a href="" class="ml-8">Skills</a>
-                <a href="" class="ml-8">Contact</a>
-                <a href="" class="ml-8">Links</a>
+                <!-- <a href="#Aboutme" class="ml-8">About me</a> -->
+                <a href="#skills" class="ml-8">Skills</a>
+                <a href="#contact" class="ml-8">Contact</a>
+                <a href="#social" class="ml-8">Social media</a>
             </div>
             <div class="block md:hidden">
                 <button class="flex items-center py-2 text-white">
@@ -36,25 +36,25 @@
     <img src="img/cover.jpg" alt="" class="w-full">
     <main>
         <!-- Skills -->
-        <div class="skills">
+        <div id="skills" class="skills">
             <h1 class="heading text-center font-bold text-4xl my-16">Skills</h1>
             <div class="w-full bg-gray-200 p-2 text-center text-lg py-16">
-                <span class="mx-8">Python</span>
-                <span class="mx-8">Javascript</span>
-                <span class="mx-8">HTML</span>
-                <span class="mx-8">CSS</span>
-                <span class="mx-8">Git</span>
-                <span class="mx-8">Linux</span>
-                <span class="mx-8">Unity3D</span>
+                <div class="mx-8 md:inline">Python</div>
+                <div class="mx-8 md:inline">Javascript</div>
+                <div class="mx-8 md:inline">HTML</div>
+                <div class="mx-8 md:inline">CSS</div>
+                <div class="mx-8 md:inline">Git</div>
+                <div class="mx-8 md:inline">Linux</div>
+                <div class="mx-8 md:inline">Unity3D</div>
             </div>
         </div>
 
         <!-- Projects -->
-        <div class="projects">
+        <div id="projects" class="projects">
             <h1 class="heading text-center font-bold text-4xl my-16">Projects</h1>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 container mx-auto">
                 <a href="https://jurankovi-triatlon.cz">
-                    <div class="bg-gray-200 project-card-shadow m-4 rounded">
+                    <div class="bg-gray-200 project-card-shadow m-4 rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-1.jpg" alt=""></div>
                         <div class="p-8">
                             <div class="text-xl font-bold">jurankovi-triatlon.cz</div>
@@ -63,7 +63,7 @@
                     </div>
                 </a>
                 <a href="https://github.com/lukyjuranek/mailbox-destroyer">
-                    <div class="bg-gray-200 project-card-shadow m-4 rounded">
+                    <div class="bg-gray-200 project-card-shadow m-4 rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-2.png" alt=""></div>
                         <div class="p-8">
                             <div class="text-xl font-bold">Mailbox destroyer</div>
@@ -72,7 +72,7 @@
                     </div>
                 </a>
                 <a href="https://dont-miss.netlify.app">
-                    <div class="bg-gray-200 project-card-shadow m-4 rounded">
+                    <div class="bg-gray-200 project-card-shadow m-4 rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-3.png" alt=""></div>
                         <div class="p-8">
                             <div class="text-xl font-bold">Don't miss</div>
@@ -81,7 +81,7 @@
                     </div>
                 </a>
                 <a href="https://github.com/lukyjuranek/wordlist-generator">
-                    <div class="bg-gray-200 project-card-shadow m-4 rounded">
+                    <div class="bg-gray-200 project-card-shadow m-4 rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-4.png" alt=""></div>
                         <div class="p-8">
                             <div class="text-xl font-bold">Wordlist generator</div>
@@ -90,7 +90,7 @@
                     </div>
                 </a>
                 <a href="https://webove-frameworky.netlify.app">
-                    <div class="bg-gray-200 project-card-shadow m-4 rounded">
+                    <div class="bg-gray-200 project-card-shadow m-4 rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-5.png" alt=""></div>
                         <div class="p-8">
                             <div class="text-xl font-bold">Webové frameworky</div>
@@ -99,10 +99,19 @@
                     </div>
                 </a>
                 <a href="https://tron-arcade.netlify.app">
-                    <div class="bg-gray-200 project-card-shadow m-4 rounded">
+                    <div class="bg-gray-200 project-card-shadow m-4 rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-6.png" alt=""></div>
                         <div class="p-8">
                             <div class="text-xl font-bold">Tron arcade</div>
+                            <div class="pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet repudiandae quos delectus unde similique porro veritatis totam et voluptas nisi harum.</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://jurankovi-triatlon-old.netlify.app">
+                    <div class="bg-gray-200 project-card-shadow m-4 rounded transition duration-500 ease-in-out transform hover:scale-105">
+                        <div><img class="rounded-t" src="img/thumbnail-7.png" alt=""></div>
+                        <div class="p-8">
+                            <div class="text-xl font-bold">jurankovi-traitlon.cz (old design)</div>
                             <div class="pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet repudiandae quos delectus unde similique porro veritatis totam et voluptas nisi harum.</div>
                         </div>
                     </div>
@@ -111,7 +120,7 @@
         </div>
 
         <!-- Social -->
-        <div class="skills">
+        <div id="social" class="social">
             <h1 class="heading text-center font-bold text-4xl my-16">Social</h1>
             <div class="w-full bg-gray-200 p-2 text-lg py-16 flex justify-center">
                 <a href="http://instagram.com/luky_juranek">
@@ -158,7 +167,7 @@
         </div>
 
         <!-- Contact -->
-        <div class="skills mb-16">
+        <div id="contact" class="contact mb-16">
             <h1 class="heading text-center font-bold text-4xl my-16">Contact</h1>
             <div class="w-full bg-gray-200 p-2 text-center text-lg py-16">
                 <span class="mx-8">lukasjuranek382@gmail.com</span>
