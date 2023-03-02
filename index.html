@@ -11,6 +11,7 @@
     <link href="lib/Inter.ttf" rel="stylesheet" />
     <link rel="stylesheet" href="lib/tailwind.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="custom-element.js"></script>
 </head>
 
 <body class="font-inter">
@@ -55,16 +56,34 @@
         <div id="projects" class="projects">
             <h1 class="heading text-center font-bold text-4xl my-16">Projects</h1>
             <div class="container mx-auto px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <a class="m-4" href="https://jurankovi-triatlon.cz">
+
+                
+                <!-- <a class="m-4" href="https://jurankovi-triatlon.cz">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
-                        <div><img class="rounded-t" src="img/thumbnail-1.jpg" alt=""></div>
+                        <div><img class="rounded-t" src="img/thumbnail-1.png" alt=""></div>
                         <div class="p-8">
                             <div class="text-xl font-bold">jurankovi-triatlon.cz</div>
                             <div class="pt-4">Personal webpage with mine and my sister's sport photos and results.</div>
                         </div>
                     </div>
-                </a>
-                <a class="m-4" href="https://dont-miss.netlify.app">
+                </a> -->
+                <project-card class="m-4" href="https://jurankovi-triatlon.cz" title="jurankovi-triatlon.cz" text="Personal webpage with mine and my sister's sport photos and results." src="img/thumbnail-1.jpg"></project-card>
+
+                <project-card class="m-4" href="https://dont-miss.netlify.app" title="Don't miss" text="A single-player javascript game. One missed shot and you're dead. I used the javascript library p5.js for this project." src="img/thumbnail-3.png"></project-card>
+
+                <project-card class="m-4" href="https://github.com/lukyjuranek/1942-game" title="jurankovi-triatlon.cz" text="1942 inspired python game created in the retro game engine called Pyxel. This game has been made as a part of a university assignment." src="img/thumbnail-11.png"></project-card>
+                <project-card class="m-4" href="https://github.com/lukyjuranek/wordlist-generator" title="Wordlist generator" text="A python command line tool that creates wordlists for password cracking based on target's personal information like name and birthdate." src="img/thumbnail-4.png"></project-card>
+
+                <project-card class="m-4" href="https://github.com/lukyjuranek/photo-trap-app" title="Photo Trap app" text="An app created to learn React Native. With this app you can take a photo of something like your desk before and after and then compare the photots to see if something has been moved or taken." src="img/thumbnail-10.png"></project-card>
+
+                <project-card class="m-4" href="https://github.com/lukyjuranek/arduino-maze-robot" title="Arduino maze robot" text="Arduino robot that I programmed in my university class to solve a simple maze. The robot was already designed I only assambled it." src="img/thumbnail-12.png"></project-card>
+                <project-card class="m-4" href="https://github.com/lukyjuranek/mailbox-destroyer" title="Mailbox destroyer" text="A single-player bus driving game where your goal is to destroy mailboxes by driving into them. It was created in Unity." src="img/thumbnail-2.png"></project-card>
+                <project-card class="m-4" href="https://webove-frameworky.netlify.app" title="Webové frameworky" text="A simple website made for a school project. This website is about ReactJS, jQuery and Bootstrap." src="img/thumbnail-5.png"></project-card>
+                <project-card class="m-4" href="https://tron-arcade.netlify.app" title="Tron arcade" text="My first javascript game. It's a two-player game inspired by the arcade game from Tron." src="img/thumbnail-6.png"></project-card>
+                <project-card class="m-4" href="https://jurankovi-triatlon-old.netlify.app" title="jurankovi-triatlon.cz (old design)" text="Old design of jurankovi-triatlon.cz." src="img/thumbnail-7.png"></project-card>
+                <project-card class="m-4" href="https://swimmer-stopwatch.netlify.app/" title="Swimmer stopwatch" text="A web-based stopwatch for timing two swimmers." src="img/thumbnail-8.png"></project-card>
+
+                <!-- <a class="m-4" href="https://dont-miss.netlify.app">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-3.png" alt=""></div>
                         <div class="p-8">
@@ -72,17 +91,17 @@
                             <div class="pt-4">A single-player javascript game. One missed shot and you're dead. I used the javascript library p5.js for this project.</div>
                         </div>
                     </div>
-                </a>
-                <a class="m-4" href="https://github.com/lukyjuranek/1942-game">
+                </a> -->
+                <!-- <a class="m-4" href="https://github.com/lukyjuranek/1942-game">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-11.png" alt=""></div>
                         <div class="p-8">
                             <div class="text-xl font-bold">1942</div>
-                            <div class="pt-4">1942 inspired python game created in the retro game engine called Pyxel. This game has been made as a part of a university assignemnt.</div>
+                            <div class="pt-4">1942 inspired python game created in the retro game engine called Pyxel. This game has been made as a part of a university assignment.</div>
                         </div>
                     </div>
-                </a>
-                <a class="m-4" href="https://github.com/lukyjuranek/wordlist-generator">
+                </a> -->
+                <!-- <a class="m-4" href="https://github.com/lukyjuranek/wordlist-generator">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-4.png" alt=""></div>
                         <div class="p-8">
@@ -90,8 +109,8 @@
                             <div class="pt-4">A python command line tool that creates wordlists for password cracking based on target's personal information like name and birthdate.</div>
                         </div>
                     </div>
-                </a>
-                <a class="m-4" href="https://github.com/lukyjuranek/photo-trap-app">
+                </a> -->
+                <!-- <a class="m-4" href="https://github.com/lukyjuranek/photo-trap-app">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-10.png" alt=""></div>
                         <div class="p-8">
@@ -99,8 +118,17 @@
                             <div class="pt-4">An app created to learn React Native. With this app you can take a photo of something like your desk before and after and then compare the photots to see if something has been moved or taken.</div>
                         </div>
                     </div>
-                </a>
-                <a class="m-4" href="https://github.com/lukyjuranek/mailbox-destroyer">
+                </a> -->
+                <!-- <a class="m-4" href="https://github.com/lukyjuranek/arduino-maze-robot">
+                    <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
+                        <div><img class="rounded-t" src="img/thumbnail-12.png" alt=""></div>
+                        <div class="p-8">
+                            <div class="text-xl font-bold">Arduino maze robot</div>
+                            <div class="pt-4">Arduino robot that I programmed in my university class to solve a simple maze. The robot was already designed I only assambled it.</div>
+                        </div>
+                    </div>
+                </a> -->
+                <!-- <a class="m-4" href="https://github.com/lukyjuranek/mailbox-destroyer">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-2.png" alt=""></div>
                         <div class="p-8">
@@ -108,8 +136,8 @@
                             <div class="pt-4">A single-player bus driving game where your goal is to destroy mailboxes by driving into them. It was created in Unity.</div>
                         </div>
                     </div>
-                </a>
-                <a class="m-4" href="https://webove-frameworky.netlify.app">
+                </a> -->
+                <!-- <a class="m-4" href="https://webove-frameworky.netlify.app">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-5.png" alt=""></div>
                         <div class="p-8">
@@ -117,8 +145,8 @@
                             <div class="pt-4">A simple website made for a school project. This website is about ReactJS, jQuery and Bootstrap.</div>
                         </div>
                     </div>
-                </a>
-                <a class="m-4" href="https://tron-arcade.netlify.app">
+                </a> -->
+                <!-- <a class="m-4" href="https://tron-arcade.netlify.app">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-6.png" alt=""></div>
                         <div class="p-8">
@@ -126,8 +154,8 @@
                             <div class="pt-4">My first javascript game. It's a two-player game inspired by the arcade game from Tron.</div>
                         </div>
                     </div>
-                </a>
-                <a class="m-4" href="https://jurankovi-triatlon-old.netlify.app">
+                </a> -->
+                <!-- <a class="m-4" href="https://jurankovi-triatlon-old.netlify.app">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-7.png" alt=""></div>
                         <div class="p-8">
@@ -135,8 +163,8 @@
                             <div class="pt-4">Old design of jurankovi-triatlon.cz.</div>
                         </div>
                     </div>
-                </a>
-                <a class="m-4" href="https://swimmer-stopwatch.netlify.app/">
+                </a> -->
+                <!-- <a class="m-4" href="https://swimmer-stopwatch.netlify.app/">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-8.png" alt=""></div>
                         <div class="p-8">
@@ -144,7 +172,7 @@
                             <div class="pt-4">A web-based stopwatch for timing two swimmers.</div>
                         </div>
                     </div>
-                </a>
+                </a> -->
             </div>
         </div>
 
