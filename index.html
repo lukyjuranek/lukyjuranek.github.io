@@ -20,7 +20,6 @@
             <div class="text-left"><img class="h-10 w-10" src="img/logo.png" alt=""></div>
             <div class="text-right hidden md:block">
                 <!-- <a href="#Aboutme" class="ml-8">About me</a> -->
-                <a href="#skills" class="ml-8">Skills</a>
                 <a href="#projects" class="ml-8">Projects</a>
                 <a href="#social" class="ml-8">Social media</a>
                 <a href="#contact" class="ml-8">Contact</a>
@@ -37,50 +36,66 @@
     </nav>
     <img src="img/cover.jpg" alt="" class="w-full">
     <main>
+
+
+        <div id="bluebee" class="bluebee">
+            <h1 class="heading text-center font-bold text-4xl my-16">Bluebee</h1>
+            <div class=" flex flex-col md:flex-row mx-8 md:mx-24 rounded project-card-shadow transition duration-500 ease-in-out transform hover:scale-105">
+                <a href="https://blubee.es" class="flex-1">
+                    <!-- <span> -->
+                        <img src="img/bluebee.png" alt="" class="w-full rounded-l">
+                    <!-- </span> -->
+                </a>
+                <span class="flex-1 p-14 bg-gray-200 rounded-r">
+                    <p>Bluebee is a platform that lets users offer and look for properties with a tinder-like interface. I've been working on this project since July 2024 with my partner Daniel Totolici.</p>
+                </span>
+            </div>
+
+        </div>
+
+
         <!-- Skills -->
-        <div id="skills" class="skills">
+        <!-- <div id="skills" class="skills">
             <h1 class="heading text-center font-bold text-4xl my-16">Skills</h1>
             <div class="w-full bg-gray-200 p-2 text-center text-lg py-16">
                 <div class="mx-8 md:inline">Python</div>
-                <div class="mx-8 md:inline">Javascript</div>
+                <div class="mx-8 md:inline">R</div>
                 <div class="mx-8 md:inline">React Native</div>
-                <div class="mx-8 md:inline">HTML</div>
-                <div class="mx-8 md:inline">CSS</div>
                 <div class="mx-8 md:inline">Git</div>
                 <div class="mx-8 md:inline">Linux</div>
                 <div class="mx-8 md:inline">Unity3D</div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Projects -->
         <div id="projects" class="projects">
-            <h1 class="heading text-center font-bold text-4xl my-16">Projects</h1>
-            <div class="container mx-auto px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <project-card class="m-4" href="https://play.google.com/store/apps/details?id=com.lukasjuranek.journal" title="Simple Journal" text="Very simple journaling app created with React Native. Available on Google Play." src="img/thumbnail-14.png"></project-card>
+            <h1 class="heading text-center font-bold text-4xl my-16">Past Projects</h1>
+            <div class="container px-8 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+                <project-card href="https://play.google.com/store/apps/details?id=com.lukasjuranek.journal" title="Simple Journal" text="Very simple journaling app created with React Native. Available on Google Play." src="img/thumbnail-14.png"></project-card>
 
-                <project-card class="m-4" href="https://play.google.com/store/apps/details?id=com.lukasjuranek.stopwatch" title="Interval Master" text="React Native app that lets coaches time multiple athletes at once and track their lap and interval times all at once. Available on Google Play." src="img/thumbnail-13.png"></project-card>
+                <project-card href="https://play.google.com/store/apps/details?id=com.lukasjuranek.stopwatch" title="Interval Master" text="React Native app that lets coaches time multiple athletes at once and track their lap and interval times all at once. Available on Google Play." src="img/thumbnail-13.png"></project-card>
 
-                <project-card class="m-4" href="https://jurankovi-triatlon.cz" title="jurankovi-triatlon.cz" text="Personal webpage with mine and my sister's sport photos and results." src="img/thumbnail-1.jpg"></project-card>
+                <project-card href="https://jurankovi-triatlon.cz" title="jurankovi-triatlon.cz" text="Personal webpage with mine and my sister's sport photos and results." src="img/thumbnail-1.jpg"></project-card>
 
-                <project-card class="m-4" href="https://dont-miss.netlify.app" title="Don't miss" text="A single-player javascript game. One missed shot and you're dead. I used the javascript library p5.js for this project." src="img/thumbnail-3.png"></project-card>
+                <project-card href="https://dont-miss.netlify.app" title="Don't miss" text="A single-player javascript game. One missed shot and you're dead. I used the javascript library p5.js for this project." src="img/thumbnail-3.png"></project-card>
 
-                <project-card class="m-4" href="https://github.com/lukyjuranek/1942-game" title="1942" text="1942 inspired python game created in the retro game engine called Pyxel. This game has been made as a part of a university assignment." src="img/thumbnail-11.png"></project-card>
-                <project-card class="m-4" href="https://github.com/lukyjuranek/wordlist-generator" title="Wordlist generator" text="A python command line tool that creates wordlists for password cracking based on target's personal information like name and birthdate." src="img/thumbnail-4.png"></project-card>
+                <project-card href="https://github.com/lukyjuranek/1942-game" title="1942" text="1942 inspired python game created in the retro game engine called Pyxel. This game has been made as a part of a university assignment." src="img/thumbnail-11.png"></project-card>
+                <project-card href="https://github.com/lukyjuranek/wordlist-generator" title="Wordlist generator" text="A python command line tool that creates wordlists for password cracking based on target's personal information like name and birthdate." src="img/thumbnail-4.png"></project-card>
 
-                <project-card class="m-4" href="https://play.google.com/store/apps/details?id=com.lukasjuranek.phototrapapp" title="Photo Trap" text="An app created to learn React Native. With this app you can take a photo of something like your desk before and after and then compare the photos to see if something has been moved or taken. Available on Google Play." src="img/thumbnail-10.png"></project-card>
+                <project-card href="https://play.google.com/store/apps/details?id=com.lukasjuranek.phototrapapp" title="Photo Trap" text="An app created to learn React Native. With this app you can take a photo of something like your desk before and after and then compare the photos to see if something has been moved or taken. Available on Google Play." src="img/thumbnail-10.png"></project-card>
 
-                <project-card class="m-4" href="https://github.com/lukyjuranek/arduino-maze-robot" title="Arduino maze robot" text="Arduino robot that I programmed in my university class to solve a simple maze. The robot was already designed I only assembled it and coded the logic." src="img/thumbnail-12.png"></project-card>
-                <project-card class="m-4" href="https://github.com/lukyjuranek/mailbox-destroyer" title="Mailbox destroyer" text="A single-player bus driving game where your goal is to destroy mailboxes by driving into them. It was created in Unity." src="img/thumbnail-2.png"></project-card>
+                <project-card href="https://github.com/lukyjuranek/arduino-maze-robot" title="Arduino maze robot" text="Arduino robot that I programmed in my university class to solve a simple maze. The robot was already designed I only assembled it and coded the logic." src="img/thumbnail-12.png"></project-card>
+                <project-card href="https://github.com/lukyjuranek/mailbox-destroyer" title="Mailbox destroyer" text="A single-player bus driving game where your goal is to destroy mailboxes by driving into them. It was created in Unity." src="img/thumbnail-2.png"></project-card>
 
-                <project-card class="m-4" href="https://webove-frameworky.netlify.app" title="Webové frameworky" text="A simple website made for a school project. This website is about ReactJS, jQuery and Bootstrap." src="img/thumbnail-5.png"></project-card>
+                <project-card href="https://webove-frameworky.netlify.app" title="Webové frameworky" text="A simple website made for a school project. This website is about ReactJS, jQuery and Bootstrap." src="img/thumbnail-5.png"></project-card>
 
-                <project-card class="m-4" href="https://tron-arcade.netlify.app" title="Tron arcade" text="My first javascript game. It's a two-player game inspired by the arcade game from Tron." src="img/thumbnail-6.png"></project-card>
+                <project-card href="https://tron-arcade.netlify.app" title="Tron arcade" text="My first javascript game. It's a two-player game inspired by the arcade game from Tron." src="img/thumbnail-6.png"></project-card>
 
-                <project-card class="m-4" href="https://jurankovi-triatlon-old.netlify.app" title="jurankovi-triatlon.cz (old design)" text="Old design of jurankovi-triatlon.cz." src="img/thumbnail-7.png"></project-card>
+                <project-card href="https://jurankovi-triatlon-old.netlify.app" title="jurankovi-triatlon.cz (old design)" text="Old design of jurankovi-triatlon.cz." src="img/thumbnail-7.png"></project-card>
 
-                <project-card class="m-4" href="https://swimmer-stopwatch.netlify.app/" title="Swimmer stopwatch" text="A web-based stopwatch for timing two swimmers." src="img/thumbnail-8.png"></project-card>
+                <project-card href="https://swimmer-stopwatch.netlify.app/" title="Swimmer stopwatch" text="A web-based stopwatch for timing two swimmers." src="img/thumbnail-8.png"></project-card>
 
-                <!-- <a class="m-4" href="https://dont-miss.netlify.app">
+                <!-- <a href="https://dont-miss.netlify.app">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-3.png" alt=""></div>
                         <div class="p-8">
@@ -89,7 +104,7 @@
                         </div>
                     </div>
                 </a> -->
-                <!-- <a class="m-4" href="https://github.com/lukyjuranek/1942-game">
+                <!-- <a href="https://github.com/lukyjuranek/1942-game">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-11.png" alt=""></div>
                         <div class="p-8">
@@ -98,7 +113,7 @@
                         </div>
                     </div>
                 </a> -->
-                <!-- <a class="m-4" href="https://github.com/lukyjuranek/wordlist-generator">
+                <!-- <a href="https://github.com/lukyjuranek/wordlist-generator">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-4.png" alt=""></div>
                         <div class="p-8">
@@ -107,7 +122,7 @@
                         </div>
                     </div>
                 </a> -->
-                <!-- <a class="m-4" href="https://github.com/lukyjuranek/photo-trap-app">
+                <!-- <a href="https://github.com/lukyjuranek/photo-trap-app">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-10.png" alt=""></div>
                         <div class="p-8">
@@ -116,7 +131,7 @@
                         </div>
                     </div>
                 </a> -->
-                <!-- <a class="m-4" href="https://github.com/lukyjuranek/arduino-maze-robot">
+                <!-- <a href="https://github.com/lukyjuranek/arduino-maze-robot">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-12.png" alt=""></div>
                         <div class="p-8">
@@ -125,7 +140,7 @@
                         </div>
                     </div>
                 </a> -->
-                <!-- <a class="m-4" href="https://github.com/lukyjuranek/mailbox-destroyer">
+                <!-- <a href="https://github.com/lukyjuranek/mailbox-destroyer">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-2.png" alt=""></div>
                         <div class="p-8">
@@ -134,7 +149,7 @@
                         </div>
                     </div>
                 </a> -->
-                <!-- <a class="m-4" href="https://webove-frameworky.netlify.app">
+                <!-- <a href="https://webove-frameworky.netlify.app">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-5.png" alt=""></div>
                         <div class="p-8">
@@ -143,7 +158,7 @@
                         </div>
                     </div>
                 </a> -->
-                <!-- <a class="m-4" href="https://tron-arcade.netlify.app">
+                <!-- <a href="https://tron-arcade.netlify.app">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-6.png" alt=""></div>
                         <div class="p-8">
@@ -152,7 +167,7 @@
                         </div>
                     </div>
                 </a> -->
-                <!-- <a class="m-4" href="https://jurankovi-triatlon-old.netlify.app">
+                <!-- <a href="https://jurankovi-triatlon-old.netlify.app">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-7.png" alt=""></div>
                         <div class="p-8">
@@ -161,7 +176,7 @@
                         </div>
                     </div>
                 </a> -->
-                <!-- <a class="m-4" href="https://swimmer-stopwatch.netlify.app/">
+                <!-- <a href="https://swimmer-stopwatch.netlify.app/">
                     <div class="h-full bg-gray-200 project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                         <div><img class="rounded-t" src="img/thumbnail-8.png" alt=""></div>
                         <div class="p-8">
