@@ -10,8 +10,8 @@ class ProjectCard extends HTMLElement {
             <div class="h-full bg-secondary project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
                 <div><img class="rounded-t" src="${img}" alt=""></div>
                 <div class="p-8">
-                    <div class="text-xl font-bold text-white">${title}</div>
-                    <div class="pt-4 text-white">${text}</div>
+                    <div class="text-xl font-medium text-white">${title}</div>
+                    <div class="pt-4 text-gray-300">${text}</div>
                 </div>
             </div>
         </a>`;
@@ -36,8 +36,8 @@ class StartupCard extends HTMLElement {
                         </a>
                     </div>
                     <div class="flex-1 bg-secondary p-8 lg:rounded-tr-lg lg:rounded-br-lg rounded-bl-lg rounded-br-lg lg:rounded-bl-none">
-                        <h2 class="text-3xl font-bold text-white mb-4">${title}</h2>
-                        <p class="text-white">${text}</p>
+                        <h2 class="text-3xl font-medium text-white mb-4">${title}</h2>
+                        <p class="text-gray-300">${text}</p>
                     </div>
                 </div>
             </div>`;
