@@ -1,0 +1,102 @@
+---
+import { Image } from 'astro:assets';
+import aroaImg from '../assets/img/aroa.png';
+import bluebeeImg from '../assets/img/bluebee.png';
+import thumbnail1Img from '../assets/img/thumbnail-1.jpg';
+import thumbnail2Img from '../assets/img/thumbnail-2.png';
+import thumbnail3Img from '../assets/img/thumbnail-3.png';
+import thumbnail4Img from '../assets/img/thumbnail-4.png';
+import thumbnail5Img from '../assets/img/thumbnail-5.png';
+import thumbnail6Img from '../assets/img/thumbnail-6.png';
+import thumbnail7Img from '../assets/img/thumbnail-7.png';
+import thumbnail8Img from '../assets/img/thumbnail-8.png';
+import thumbnail10Img from '../assets/img/thumbnail-10.png';
+import thumbnail11Img from '../assets/img/thumbnail-11.png';
+import thumbnail12Img from '../assets/img/thumbnail-12.png';
+import thumbnail13Img from '../assets/img/thumbnail-13.png';
+import thumbnail14Img from '../assets/img/thumbnail-14.png';
+import thumbnail15Img from '../assets/img/thumbnail-15.png';
+
+interface Props {
+  href: string;
+  src: string;
+  title: string;
+  text: string;
+  tag?: 'WEB' | 'GAME' | 'APP' | 'OTHER';
+}
+
+const { href, src, title, text, tag = 'other' } = Astro.props;
+
+const tagColors: Record<string, { bg: string; text: string }> = {
+  WEB: { bg: 'bg-blue-600', text: 'text-white' },
+  GAME: { bg: 'bg-purple-600', text: 'text-white' },
+  APP: { bg: 'bg-green-600', text: 'text-white' },
+  OTHER: { bg: 'bg-gray-600', text: 'text-white' },
+};
+
+const tagColor = tagColors[tag] || tagColors.other;
+
+// Map image paths to imported images
+const imageMap: Record<string, ImageMetadata> = {
+  '/img/aroa.png': aroaImg,
+  '/img/bluebee.png': bluebeeImg,
+  '/img/thumbnail-1.jpg': thumbnail1Img,
+  '/img/thumbnail-2.png': thumbnail2Img,
+  '/img/thumbnail-3.png': thumbnail3Img,
+  '/img/thumbnail-4.png': thumbnail4Img,
+  '/img/thumbnail-5.png': thumbnail5Img,
+  '/img/thumbnail-6.png': thumbnail6Img,
+  '/img/thumbnail-7.png': thumbnail7Img,
+  '/img/thumbnail-8.png': thumbnail8Img,
+  '/img/thumbnail-10.png': thumbnail10Img,
+  '/img/thumbnail-11.png': thumbnail11Img,
+  '/img/thumbnail-12.png': thumbnail12Img,
+  '/img/thumbnail-13.png': thumbnail13Img,
+  '/img/thumbnail-14.png': thumbnail14Img,
+  '/img/thumbnail-15.png': thumbnail15Img,
+};
+
+const image = imageMap[src];
+---
+
+<a href={href}>
+  <div class="h-full bg-secondary project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
+    <div class="relative">
+      {image ? (
+        <Image 
+          src={image} 
+          alt={title} 
+          class="rounded-t w-full h-auto"
+          loading="lazy"
+        />
+      ) : (
+        <img 
+          src={src} 
+          alt={title} 
+          class="rounded-t w-full h-auto"
+          loading="lazy"
+        />
+      )}
+    </div>
+    <div class="p-8">
+      <div class="flex flex-row sm:flex-row sm:items-center justify-between gap-2 mb-2">
+        <div class="text-xl font-medium text-white">{title}</div>
+        {tag && (
+          <span class={`${tagColor.bg} ${tagColor.text} text-xs font-semibold px-3 py-1 rounded-full tracking-wide whitespace-nowrap self-start sm:self-auto`}>
+            {tag}
+          </span>
+        )}
+      </div>
+      <div class="pt-4 text-gray-300">{text}</div>
+    </div>
+  </div>
+</a>
+
+<style>
+  .bg-secondary {
+    background-color: #191919;
+  }
+  .project-card-shadow {
+    box-shadow: 0px 4px 39px rgba(0, 0, 0, 0.25);
+  }
+</style>

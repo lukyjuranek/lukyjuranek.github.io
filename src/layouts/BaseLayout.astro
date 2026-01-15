@@ -1,0 +1,74 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Lukas Juranek - Data Science Student & Entrepreneur" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/img/logo.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="font-avenir">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .font-avenir {
+    /* font-family: "Avenir", "Avenir Next", "Avenir Next LT Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; */
+    font-family: sans-serif;
+  }
+
+  body {
+    background-color: #000000;
+    min-height: 100vh;
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: -o-crisp-edges; /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+  }
+
+  .header-with-cover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/img/cover.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 50vh;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  @media (max-width: 767px) {
+    #mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+    }
+  }
+
+  .project-card-shadow {
+    box-shadow: 0px 4px 39px rgba(0, 0, 0, 0.25);
+  }
+  .bg-secondary {
+    background-color: #191919;
+  }
+
+</style>
