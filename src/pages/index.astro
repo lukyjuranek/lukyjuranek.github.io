@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import ProjectCard from '../components/ProjectCard.astro';
-import StartupCard from '../components/StartupCard.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import StartupCard from "../components/StartupCard.astro";
 ---
 
 <BaseLayout title="Lukas Juranek">
@@ -12,101 +12,233 @@ import StartupCard from '../components/StartupCard.astro';
         <a href="#contact" class="ml-6 md:ml-8 hover:text-gray-300 transition-colors">Contact</a>
       </div>
       <div class="block md:hidden">
-        <button id="mobile-menu-button" class="flex items-center py-2 text-white hover:text-gray-300 transition-colors" aria-label="Toggle menu">
+        <button
+          id="mobile-menu-button"
+          class="flex items-center py-2 text-white hover:text-gray-300 transition-colors"
+          aria-label="Toggle menu"
+        >
           <svg id="menu-icon" class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
           </svg>
           <svg id="close-icon" class="fill-current h-6 w-6 hidden" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <title>Close</title>
-            <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
+            <path
+              d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"
+            ></path>
           </svg>
         </button>
       </div>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-95 backdrop-blur-sm z-50 pt-16">
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-95 backdrop-blur-sm z-50 pt-16"
+    >
       <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
         <a href="#projects" class="text-white hover:text-gray-300 transition-colors py-2">Projects</a>
         <a href="#contact" class="text-white hover:text-gray-300 transition-colors py-2">Contact</a>
       </div>
     </div>
   </nav>
-  
+
   <!-- Header Section -->
   <header class="header-with-cover text-white text-center py-16 sm:py-24 md:py-32 px-4">
-    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-3 sm:mb-4">Lukas Juranek</h1>
-    <p class="text-lg sm:text-xl mb-6 sm:mb-8">Data Science Student at UC3M & Entrepreneur</p>
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-medium mb-3 sm:mb-4">Lukas Juranek</h1>
+    <p class="text-lg sm:text-xl mb-6 sm:mb-8">Data Science Student & Entrepreneur</p>
     <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-      <a href="#projects" class="bg-gray-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full hover:bg-gray-600 transition-colors inline-flex items-center justify-center text-sm sm:text-base">Projects</a>
-      <a href="#contact" class="border border-gray-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full hover:bg-gray-800 transition-colors inline-flex items-center justify-center text-sm sm:text-base">Contact</a>
+      <a
+        href="#projects"
+        class="bg-gray-200 text-black px-6 sm:px-8 py-2.5 sm:py-3 rounded-full hover:bg-gray-600 transition-colors inline-flex items-center justify-center text-sm sm:text-base"
+        >Projects</a
+      >
+      <a
+        href="#contact"
+        class="border border-gray-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full hover:bg-gray-800 transition-colors inline-flex items-center justify-center text-sm sm:text-base"
+        >Contact</a
+      >
     </div>
   </header>
-  
+
   <main>
+    <!-- University -->
+    <div id="university" class="university pt-12 sm:pt-16 px-4 flex justify-center">
+      <span class="text-white text-lg sm:text-xl text-center flex flex-col items-center">
+        <span class="mb-2 flex items-center gap-2">
+          Data Science at
+          <a href="https://www.uc3m.es" class="text-blue-400 hover:underline" target="_blank" rel="noopener">UC3M</a>
+          <a href="https://www.uc3m.es" target="_blank" rel="noopener">
+            <img src="/img/uc3m-logo.svg" alt="UC3M logo" class="h-10 sm:h-10 inline-block" loading="lazy" />
+          </a>
+        </span>
+      </span>
+    </div>
+
     <!-- Startups -->
-    <div id="startups" class="startups pt-12 sm:pt-16 px-4">
+    <div id="startups" class="startups pt-12 sm:pt-16 px-4 max-w-6xl mx-auto">
       <h1 class="heading text-center font-medium text-3xl sm:text-4xl my-8 sm:my-12 md:my-16 text-white">Startups</h1>
-      
-      <StartupCard 
-        href="https://aroa-ai.com" 
-        src="/img/aroa.png" 
-        title="Aroa" 
-        text="A collaborative workspace for ambitious teams. Makes your work better by connecting your tools and teams." 
-        mb="mb-16" 
+
+      <StartupCard
+        href="https://aroa-ai.com"
+        src="/img/aroa.png"
+        title="Aroa"
+        text="A collaborative workspace for ambitious teams. Makes your work better by connecting your tools and teams."
+        mb="mb-16"
       />
 
-      <StartupCard 
-        href="https://bluebee.es" 
-        src="/img/bluebee.png" 
-        title="Bluebee" 
-        text="Bluebee is a platform that lets users offer and look for properties with a tinder-like interface. Tenants can use filters to find the perfect property and landlords can get a better sense of the interested people thanks to their detailed profiles." 
+      <StartupCard
+        href="https://bluebee.es"
+        src="/img/bluebee.png"
+        title="Bluebee"
+        text="Bluebee is a platform that lets users offer and look for properties with a tinder-like interface. Tenants can use filters to find the perfect property and landlords can get a better sense of the interested people thanks to their detailed profiles."
       />
     </div>
 
     <!-- Projects -->
     <div id="projects" class="projects pt-12 sm:pt-16 px-4">
       <h1 class="heading text-center font-medium text-3xl sm:text-4xl my-8 sm:my-12 md:my-16 text-white">Software projects</h1>
-      <div class="container px-4 sm:px-6 md:px-8 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
-        <ProjectCard href="" title="Digital Nomad Trips" text="A Flask web app that helps digital nomads find the best trips." src="/img/thumbnail-15.png" tag="WEB" />
-
-        <ProjectCard href="https://play.google.com/store/apps/details?id=com.lukasjuranek.journal" title="Simple Journal" text="Very simple journaling app created with React Native. Available on Google Play." src="/img/thumbnail-14.png" tag="APP" />
-
-        <ProjectCard href="https://play.google.com/store/apps/details?id=com.lukasjuranek.stopwatch" title="Interval Master" text="React Native app that lets coaches time multiple athletes at once and track their lap and interval times all at once. Available on Google Play." src="/img/thumbnail-13.png" tag="APP" />
-
-        <ProjectCard href="https://jurankovi-triatlon.cz" title="jurankovi-triatlon.cz" text="Personal webpage with mine and my sister's sport photos and results." src="/img/thumbnail-1.jpg" tag="WEB" />
-
-        <ProjectCard href="https://dont-miss.netlify.app" title="Don't miss" text="A single-player javascript game. One missed shot and you're dead. I used the javascript library p5.js for this project." src="/img/thumbnail-3.png" tag="GAME" />
-
-        <ProjectCard href="https://github.com/lukyjuranek/1942-game" title="1942" text="1942 inspired python game created in the retro game engine called Pyxel. This game has been made as a part of a university assignment." src="/img/thumbnail-11.png" tag="GAME" />
+      <div class="container px-4 sm:px-6 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
         
-        <ProjectCard href="https://github.com/lukyjuranek/wordlist-generator" title="Wordlist generator" text="A python command line tool that creates wordlists for password cracking based on target's personal information like name and birthdate." src="/img/thumbnail-4.png" tag="OTHER" />
+        <ProjectCard
+          href=""
+          title="Digital Nomad Trips"
+          text="A Flask web app that helps digital nomads find the best trips."
+          src="/img/thumbnail-15.png"
+          tag="WEB"
+        />
 
-        <ProjectCard href="https://play.google.com/store/apps/details?id=com.lukasjuranek.phototrapapp" title="Photo Trap" text="An app created to learn React Native. With this app you can take a photo of something like your desk before and after and then compare the photos to see if something has been moved or taken. Available on Google Play." src="/img/thumbnail-10.png" tag="APP" />
+        <ProjectCard
+          href="https://humaniza-palabra.es"
+          title="humaniza-palabra.es"
+          text="A website that helps you paraphrase Spanish text making it more human and natural."
+          src="/img/thumbnail-16.png"
+          tag="WEB"
+        />
 
-        <ProjectCard href="https://github.com/lukyjuranek/arduino-maze-robot" title="Arduino maze robot" text="Arduino robot that I programmed in my university class to solve a simple maze. The robot was already designed I only assembled it and coded the logic." src="/img/thumbnail-12.png" tag="OTHER" />
-        
-        <ProjectCard href="https://github.com/lukyjuranek/mailbox-destroyer" title="Mailbox destroyer" text="A single-player bus driving game where your goal is to destroy mailboxes by driving into them. It was created in Unity." src="/img/thumbnail-2.png" tag="GAME" />
+        <ProjectCard
+          href="https://play.google.com/store/apps/details?id=com.lukasjuranek.journal"
+          title="Simple Journal"
+          text="Very simple journaling app created with React Native. Available on Google Play."
+          src="/img/thumbnail-14.png"
+          tag="APP"
+        />
 
-        <ProjectCard href="https://webove-frameworky.netlify.app" title="Webové frameworky" text="A simple website made for a school project. This website is about ReactJS, jQuery and Bootstrap." src="/img/thumbnail-5.png" tag="WEB" />
+        <ProjectCard
+          href="https://play.google.com/store/apps/details?id=com.lukasjuranek.stopwatch"
+          title="Interval Master"
+          text="React Native app that lets coaches time multiple athletes at once and track their lap and interval times all at once. Available on Google Play."
+          src="/img/thumbnail-13.png"
+          tag="APP"
+        />
 
-        <ProjectCard href="https://tron-arcade.netlify.app" title="Tron arcade" text="My first javascript game. It's a two-player game inspired by the arcade game from Tron." src="/img/thumbnail-6.png" tag="GAME" />
+        <ProjectCard
+          href="https://jurankovi-triatlon.cz"
+          title="jurankovi-triatlon.cz"
+          text="Personal webpage with mine and my sister's sport photos and results."
+          src="/img/thumbnail-1.jpg"
+          tag="WEB"
+        />
 
-        <ProjectCard href="https://jurankovi-triatlon-old.netlify.app" title="jurankovi-triatlon.cz (old design)" text="Old design of jurankovi-triatlon.cz." src="/img/thumbnail-7.png" tag="WEB" />
+        <ProjectCard
+          href="https://dont-miss.netlify.app"
+          title="Don't miss"
+          text="A single-player javascript game. One missed shot and you're dead. I used the javascript library p5.js for this project."
+          src="/img/thumbnail-3.png"
+          tag="GAME"
+        />
 
-        <ProjectCard href="https://swimmer-stopwatch.netlify.app/" title="Swimmer stopwatch" text="A web-based stopwatch for timing two swimmers." src="/img/thumbnail-8.png" tag="WEB" />
+        <ProjectCard
+          href="https://github.com/lukyjuranek/1942-game"
+          title="1942"
+          text="1942 inspired python game created in the retro game engine called Pyxel. This game has been made as a part of a university assignment."
+          src="/img/thumbnail-11.png"
+          tag="GAME"
+        />
+
+        <ProjectCard
+          href="https://github.com/lukyjuranek/wordlist-generator"
+          title="Wordlist generator"
+          text="A python command line tool that creates wordlists for password cracking based on target's personal information like name and birthdate."
+          src="/img/thumbnail-4.png"
+          tag="OTHER"
+        />
+
+        <ProjectCard
+          href="https://play.google.com/store/apps/details?id=com.lukasjuranek.phototrapapp"
+          title="Photo Trap"
+          text="An app created to learn React Native. With this app you can take a photo of something like your desk before and after and then compare the photos to see if something has been moved or taken. Available on Google Play."
+          src="/img/thumbnail-10.png"
+          tag="APP"
+        />
+
+        <ProjectCard
+          href="https://github.com/lukyjuranek/arduino-maze-robot"
+          title="Arduino maze robot"
+          text="Arduino robot that I programmed in my university class to solve a simple maze. The robot was already designed I only assembled it and coded the logic."
+          src="/img/thumbnail-12.png"
+          tag="OTHER"
+        />
+
+        <ProjectCard
+          href="https://github.com/lukyjuranek/mailbox-destroyer"
+          title="Mailbox destroyer"
+          text="A single-player bus driving game where your goal is to destroy mailboxes by driving into them. It was created in Unity."
+          src="/img/thumbnail-2.png"
+          tag="GAME"
+        />
+
+        <ProjectCard
+          href="https://webove-frameworky.netlify.app"
+          title="Webové frameworky"
+          text="A simple website made for a school project. This website is about ReactJS, jQuery and Bootstrap."
+          src="/img/thumbnail-5.png"
+          tag="WEB"
+        />
+
+        <ProjectCard
+          href="https://tron-arcade.netlify.app"
+          title="Tron arcade"
+          text="My first javascript game. It's a two-player game inspired by the arcade game from Tron."
+          src="/img/thumbnail-6.png"
+          tag="GAME"
+        />
+
+        <ProjectCard
+          href="https://jurankovi-triatlon-old.netlify.app"
+          title="jurankovi-triatlon.cz (old design)"
+          text="Old design of jurankovi-triatlon.cz."
+          src="/img/thumbnail-7.png"
+          tag="WEB"
+        />
+
+        <ProjectCard
+          href="https://swimmer-stopwatch.netlify.app/"
+          title="Swimmer stopwatch"
+          text="A web-based stopwatch for timing two swimmers."
+          src="/img/thumbnail-8.png"
+          tag="WEB"
+        />
       </div>
     </div>
 
     <!-- Contact -->
     <div id="contact" class="contact py-12 sm:py-16 px-4">
       <h1 class="heading text-center font-bold text-3xl sm:text-4xl my-8 sm:my-12 md:my-16 text-white">Contact</h1>
-      
+
       <!-- Social Media Links -->
       <div class="w-full p-2 text-base sm:text-lg py-6 sm:py-8 flex justify-center flex-wrap gap-4 sm:gap-6 md:gap-8">
         <!-- Instagram -->
         <a href="https://instagram.com/luky_juranek" class="hover:opacity-80 transition-opacity">
           <div class="mx-2 sm:mx-4 md:mx-8">
-            <svg height="32" width="32" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <svg
+              height="32"
+              width="32"
+              style="enable-background:new 0 0 512 512;"
+              version="1.1"
+              viewBox="0 0 512 512"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
               <style type="text/css">
                 .st0 {
                   fill: url(#SVGID_1_);
@@ -117,27 +249,47 @@ import StartupCard from '../components/StartupCard.astro';
                 }
 
                 .st2 {
-                  fill: #654C9F;
+                  fill: #654c9f;
                 }
               </style>
-              <g id="Edges" />
+              <g id="Edges"></g>
               <g id="Symbol">
                 <g>
-                  <radialGradient cx="56.3501" cy="19.2179" gradientTransform="matrix(0.9986 -5.233596e-02 4.448556e-02 0.8488 -36.9742 443.8014)" gradientUnits="userSpaceOnUse" id="SVGID_1_" r="711.335">
-                    <stop offset="0" style="stop-color:#FED576" />
-                    <stop offset="0.2634" style="stop-color:#F47133" />
-                    <stop offset="0.6091" style="stop-color:#BC3081" />
-                    <stop offset="1" style="stop-color:#4C63D2" />
+                  <radialGradient
+                    cx="56.3501"
+                    cy="19.2179"
+                    gradientTransform="matrix(0.9986 -5.233596e-02 4.448556e-02 0.8488 -36.9742 443.8014)"
+                    gradientUnits="userSpaceOnUse"
+                    id="SVGID_1_"
+                    r="711.335"
+                  >
+                    <stop offset="0" style="stop-color:#FED576"></stop>
+                    <stop offset="0.2634" style="stop-color:#F47133"></stop>
+                    <stop offset="0.6091" style="stop-color:#BC3081"></stop>
+                    <stop offset="1" style="stop-color:#4C63D2"></stop>
                   </radialGradient>
-                  <path class="st0" d="M96.1,23.2c-16.2,6.3-29.9,14.7-43.6,28.4C38.8,65.2,30.4,79,24.1,95.1c-6.1,15.6-10.2,33.5-11.4,59.7    c-1.2,26.2-1.5,34.6-1.5,101.4s0.3,75.2,1.5,101.4c1.2,26.2,5.4,44.1,11.4,59.7c6.3,16.2,14.7,29.9,28.4,43.6    c13.7,13.7,27.4,22.1,43.6,28.4c15.6,6.1,33.5,10.2,59.7,11.4c26.2,1.2,34.6,1.5,101.4,1.5c66.8,0,75.2-0.3,101.4-1.5    c26.2-1.2,44.1-5.4,59.7-11.4c16.2-6.3,29.9-14.7,43.6-28.4c13.7-13.7,22.1-27.4,28.4-43.6c6.1-15.6,10.2-33.5,11.4-59.7    c1.2-26.2,1.5-34.6,1.5-101.4s-0.3-75.2-1.5-101.4c-1.2-26.2-5.4-44.1-11.4-59.7C484,79,475.6,65.2,462,51.6    c-13.7-13.7-27.4-22.1-43.6-28.4c-15.6-6.1-33.5-10.2-59.7-11.4c-26.2-1.2-34.6-1.5-101.4-1.5s-75.2,0.3-101.4,1.5    C129.6,12.9,111.7,17.1,96.1,23.2z M356.6,56c24,1.1,37,5.1,45.7,8.5c11.5,4.5,19.7,9.8,28.3,18.4c8.6,8.6,13.9,16.8,18.4,28.3    c3.4,8.7,7.4,21.7,8.5,45.7c1.2,25.9,1.4,33.7,1.4,99.4s-0.3,73.5-1.4,99.4c-1.1,24-5.1,37-8.5,45.7c-4.5,11.5-9.8,19.7-18.4,28.3    c-8.6,8.6-16.8,13.9-28.3,18.4c-8.7,3.4-21.7,7.4-45.7,8.5c-25.9,1.2-33.7,1.4-99.4,1.4s-73.5-0.3-99.4-1.4    c-24-1.1-37-5.1-45.7-8.5c-11.5-4.5-19.7-9.8-28.3-18.4c-8.6-8.6-13.9-16.8-18.4-28.3c-3.4-8.7-7.4-21.7-8.5-45.7    c-1.2-25.9-1.4-33.7-1.4-99.4s0.3-73.5,1.4-99.4c1.1-24,5.1-37,8.5-45.7c4.5-11.5,9.8-19.7,18.4-28.3c8.6-8.6,16.8-13.9,28.3-18.4    c8.7-3.4,21.7-7.4,45.7-8.5c25.9,1.2,33.7,1.4,99.4,1.4S330.7,54.8,356.6,56z" />
-                  <radialGradient cx="154.0732" cy="134.5501" gradientTransform="matrix(0.9986 -5.233596e-02 4.448556e-02 0.8488 -24.3617 253.2946)" gradientUnits="userSpaceOnUse" id="SVGID_2_" r="365.2801">
-                    <stop offset="0" style="stop-color:#FED576" />
-                    <stop offset="0.2634" style="stop-color:#F47133" />
-                    <stop offset="0.6091" style="stop-color:#BC3081" />
-                    <stop offset="1" style="stop-color:#4C63D2" />
+                  <path
+                    class="st0"
+                    d="M96.1,23.2c-16.2,6.3-29.9,14.7-43.6,28.4C38.8,65.2,30.4,79,24.1,95.1c-6.1,15.6-10.2,33.5-11.4,59.7    c-1.2,26.2-1.5,34.6-1.5,101.4s0.3,75.2,1.5,101.4c1.2,26.2,5.4,44.1,11.4,59.7c6.3,16.2,14.7,29.9,28.4,43.6    c13.7,13.7,27.4,22.1,43.6,28.4c15.6,6.1,33.5,10.2,59.7,11.4c26.2,1.2,34.6,1.5,101.4,1.5c66.8,0,75.2-0.3,101.4-1.5    c26.2-1.2,44.1-5.4,59.7-11.4c16.2-6.3,29.9-14.7,43.6-28.4c13.7-13.7,22.1-27.4,28.4-43.6c6.1-15.6,10.2-33.5,11.4-59.7    c1.2-26.2,1.5-34.6,1.5-101.4s-0.3-75.2-1.5-101.4c-1.2-26.2-5.4-44.1-11.4-59.7C484,79,475.6,65.2,462,51.6    c-13.7-13.7-27.4-22.1-43.6-28.4c-15.6-6.1-33.5-10.2-59.7-11.4c-26.2-1.2-34.6-1.5-101.4-1.5s-75.2,0.3-101.4,1.5    C129.6,12.9,111.7,17.1,96.1,23.2z M356.6,56c24,1.1,37,5.1,45.7,8.5c11.5,4.5,19.7,9.8,28.3,18.4c8.6,8.6,13.9,16.8,18.4,28.3    c3.4,8.7,7.4,21.7,8.5,45.7c1.2,25.9,1.4,33.7,1.4,99.4s-0.3,73.5-1.4,99.4c-1.1,24-5.1,37-8.5,45.7c-4.5,11.5-9.8,19.7-18.4,28.3    c-8.6,8.6-16.8,13.9-28.3,18.4c-8.7,3.4-21.7,7.4-45.7,8.5c-25.9,1.2-33.7,1.4-99.4,1.4s-73.5-0.3-99.4-1.4    c-24-1.1-37-5.1-45.7-8.5c-11.5-4.5-19.7-9.8-28.3-18.4c-8.6-8.6-13.9-16.8-18.4-28.3c-3.4-8.7-7.4-21.7-8.5-45.7    c-1.2-25.9-1.4-33.7-1.4-99.4s0.3-73.5,1.4-99.4c1.1-24,5.1-37,8.5-45.7c4.5-11.5,9.8-19.7,18.4-28.3c8.6-8.6,16.8-13.9,28.3-18.4    c8.7-3.4,21.7-7.4,45.7-8.5c25.9,1.2,33.7,1.4,99.4,1.4S330.7,54.8,356.6,56z"
+                  ></path>
+                  <radialGradient
+                    cx="154.0732"
+                    cy="134.5501"
+                    gradientTransform="matrix(0.9986 -5.233596e-02 4.448556e-02 0.8488 -24.3617 253.2946)"
+                    gradientUnits="userSpaceOnUse"
+                    id="SVGID_2_"
+                    r="365.2801"
+                  >
+                    <stop offset="0" style="stop-color:#FED576"></stop>
+                    <stop offset="0.2634" style="stop-color:#F47133"></stop>
+                    <stop offset="0.6091" style="stop-color:#BC3081"></stop>
+                    <stop offset="1" style="stop-color:#4C63D2"></stop>
                   </radialGradient>
-                  <path class="st1" d="M130.9,256.3c0,69.8,56.6,126.3,126.3,126.3s126.3-56.6,126.3-126.3S327,130,257.2,130    S130.9,186.5,130.9,256.3z M339.2,256.3c0,45.3-36.7,82-82,82s-82-36.7-82-82c0-45.3,36.7-82,82-82S339.2,211,339.2,256.3z" />
-                  <circle class="st2" cx="388.6" cy="125" r="29.5" />
+                  <path
+                    class="st1"
+                    d="M130.9,256.3c0,69.8,56.6,126.3,126.3,126.3s126.3-56.6,126.3-126.3S327,130,257.2,130    S130.9,186.5,130.9,256.3z M339.2,256.3c0,45.3-36.7,82-82,82s-82-36.7-82-82c0-45.3,36.7-82,82-82S339.2,211,339.2,256.3z"
+                  ></path>
+                  <circle class="st2" cx="388.6" cy="125" r="29.5"></circle>
                 </g>
               </g>
             </svg>
@@ -147,23 +299,37 @@ import StartupCard from '../components/StartupCard.astro';
         <a href="https://github.com/lukyjuranek" class="hover:opacity-80 transition-opacity">
           <div class="mx-2 sm:mx-4 md:mx-8">
             <svg class="" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true">
-              <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+              <path
+                fill-rule="evenodd"
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+              ></path>
             </svg>
           </div>
         </a>
         <!-- LinkedIn -->
         <a href="https://linkedin.com/in/luk%C3%A1%C5%A1-jur%C3%A1nek-a53882255" class="hover:opacity-80 transition-opacity">
           <div class="mx-2 sm:mx-4 md:mx-8">
-            <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 72 72" width="32" class="weava-extension-context" data-weava-installed="1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="32"
+              viewBox="0 0 72 72"
+              width="32"
+              class="weava-extension-context"
+              data-weava-installed="1"
+            >
               <g fill="none" fill-rule="evenodd">
-                <path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z" fill="#007EBB" />
-                <path d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z" fill="#FFF" />
+                <path
+                  d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z"
+                  fill="#007EBB"></path>
+                <path
+                  d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z"
+                  fill="#FFF"></path>
               </g>
             </svg>
           </div>
         </a>
       </div>
-      
+
       <!-- Email Addresses -->
       <div class="w-full p-2 text-center text-base sm:text-lg py-6 sm:py-8">
         <div class="text-white">
@@ -176,41 +342,41 @@ import StartupCard from '../components/StartupCard.astro';
 
   <script is:inline>
     // Mobile menu toggle
-    (function() {
-      const mobileMenuButton = document.getElementById('mobile-menu-button');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const menuIcon = document.getElementById('menu-icon');
-      const closeIcon = document.getElementById('close-icon');
+    (function () {
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+      const closeIcon = document.getElementById("close-icon");
 
       if (!mobileMenuButton || !mobileMenu || !menuIcon || !closeIcon) return;
 
       function toggleMenu(show) {
         if (show) {
-          mobileMenu.classList.remove('hidden');
-          menuIcon.classList.add('hidden');
-          closeIcon.classList.remove('hidden');
+          mobileMenu.classList.remove("hidden");
+          menuIcon.classList.add("hidden");
+          closeIcon.classList.remove("hidden");
         } else {
-          mobileMenu.classList.add('hidden');
-          menuIcon.classList.remove('hidden');
-          closeIcon.classList.add('hidden');
+          mobileMenu.classList.add("hidden");
+          menuIcon.classList.remove("hidden");
+          closeIcon.classList.add("hidden");
         }
       }
 
-      mobileMenuButton.addEventListener('click', function() {
-        const isHidden = mobileMenu.classList.contains('hidden');
+      mobileMenuButton.addEventListener("click", function () {
+        const isHidden = mobileMenu.classList.contains("hidden");
         toggleMenu(isHidden);
       });
 
       // Close menu when clicking on a link
-      const menuLinks = mobileMenu.querySelectorAll('a');
-      menuLinks.forEach(function(link) {
-        link.addEventListener('click', function() {
+      const menuLinks = mobileMenu.querySelectorAll("a");
+      menuLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
           toggleMenu(false);
         });
       });
 
       // Close menu when clicking outside
-      document.addEventListener('click', function(e) {
+      document.addEventListener("click", function (e) {
         const target = e.target;
         if (target && !mobileMenuButton.contains(target) && !mobileMenu.contains(target)) {
           toggleMenu(false);
