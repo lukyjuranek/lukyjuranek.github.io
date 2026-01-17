@@ -28,14 +28,14 @@ const image = imageMap[src];
         <Image 
           src={image} 
           alt={`${title} platform screenshot`} 
-          class="w-full h-auto rounded-lg project-card-shadow"
+          class="w-full h-auto rounded-xl project-card-shadow border border-gray-900"
           loading="lazy"
         />
       ) : (
         <img 
           src={src} 
           alt={`${title} platform screenshot`} 
-          class="w-full rounded-lg project-card-shadow"
+          class="w-full rounded-xl project-card-shadow border border-gray-900"
           loading="lazy"
         />
       )}
