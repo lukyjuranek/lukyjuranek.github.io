@@ -17,9 +17,10 @@ import thumbnail13Img from '../assets/img/thumbnail-13.png';
 import thumbnail14Img from '../assets/img/thumbnail-14.png';
 import thumbnail15Img from '../assets/img/thumbnail-15.png';
 import thumbnail16Img from '../assets/img/thumbnail-16.png';
+import thumbnail17Img from '../assets/img/thumbnail-17.png';
 
 interface Props {
-  href: string;
+  href?: string;
   src: string;
   title: string;
   text: string;
@@ -35,7 +36,8 @@ const tagColors: Record<string, { bg: string; text: string }> = {
   OTHER: { bg: 'bg-gray-600', text: 'text-white' },
 };
 
-const tagColor = tagColors[tag] || tagColors.other;
+// const tagColor = tagColors[tag] || tagColors.other;
+const tagColor = { bg: 'bg-transparent', text: 'text-gray-400' };
 
 // Map image paths to imported images
 const imageMap: Record<string, ImageMetadata> = {
@@ -56,49 +58,49 @@ const imageMap: Record<string, ImageMetadata> = {
   '/img/thumbnail-14.png': thumbnail14Img,
   '/img/thumbnail-15.png': thumbnail15Img,
   '/img/thumbnail-16.png': thumbnail16Img,
+  '/img/thumbnail-17.png': thumbnail17Img,
 };
 
 const image = imageMap[src];
 ---
 
 <a href={href}>
-  <div class="h-full bg-secondary project-card-shadow rounded transition duration-500 ease-in-out transform hover:scale-105">
+  <div class="h-full rounded transition duration-500 ease-in-out transform hover:scale-[1.02]">
     <div class="relative">
       {image ? (
         <Image 
           src={image} 
           alt={title} 
-          class="rounded-t w-full h-auto"
+          class="rounded-lg w-full h-auto project-card-shadow"
           loading="lazy"
         />
       ) : (
         <img 
           src={src} 
           alt={title} 
-          class="rounded-t w-full h-auto"
+          class="rounded-lg w-full h-auto project-card-shadow"
           loading="lazy"
         />
       )}
     </div>
-    <div class="p-8">
-      <div class="flex flex-row sm:flex-row sm:items-center justify-between gap-2 mb-2">
-        <div class="text-xl font-medium text-white">{title}</div>
+    <div class="p-6 flex flex-col gap-5">
+      <div class="flex flex-row sm:flex-row sm:items-center justify-between">
+        <div class="flex items-center gap-2 text-xl font-medium text-white">
+          {title}
+          {href && href.trim() !== '' && (
+            <svg class="h-4 w-4 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <title>External link</title>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+            </svg>
+          )}
+        </div>
         {tag && (
-          <span class={`${tagColor.bg} ${tagColor.text} text-xs font-semibold px-3 py-1 rounded-full tracking-wide whitespace-nowrap self-start sm:self-auto`}>
+          <span class={`${tagColor.bg} ${tagColor.text} text-xs px-3 pb-1 pt-[6px] rounded-full border border-1 border-gray-700 tracking-wide whitespace-nowrap self-start sm:self-auto`}>
             {tag}
           </span>
         )}
       </div>
-      <div class="pt-4 text-gray-300">{text}</div>
+      <div class="text-gray-400 font-light">{text}</div>
     </div>
   </div>
 </a>
-
-<style>
-  .bg-secondary {
-    background-color: #191919;
-  }
-  .project-card-shadow {
-    box-shadow: 0px 4px 39px rgba(0, 0, 0, 0.25);
-  }
-</style>

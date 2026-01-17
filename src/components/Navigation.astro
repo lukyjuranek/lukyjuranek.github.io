@@ -1,0 +1,97 @@
+---
+---
+
+<nav class="px-4 py-3 md:px-6 md:py-4 w-full text-white text-sm md:text-base bg-transparent absolute top-0 left-0 right-0 z-40">
+  <div class="container mx-auto flex items-center justify-end">
+    <div class="text-right hidden md:block">
+      <a href="#startups" class="ml-6 md:ml-8 hover:text-gray-300 transition-colors">Startups</a>
+      <a href="#projects" class="ml-6 md:ml-8 hover:text-gray-300 transition-colors">Projects</a>
+      <a href="#contact" class="ml-6 md:ml-8 hover:text-gray-300 transition-colors">Contact</a>
+    </div>
+    <div class="block md:hidden">
+      <button
+        id="mobile-menu-button"
+        class="relative flex items-center justify-center p-2 text-white hover:text-gray-300 transition-colors"
+        aria-label="Toggle menu"
+      >
+        <span class="relative inline-flex items-center justify-center w-8 h-8">
+          <svg id="menu-icon" class="h-8 w-8 absolute inset-0 z-10" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <svg id="close-icon" class="h-8 w-8 hidden absolute inset-0 z-20" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <title>Close</title>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div
+    id="mobile-menu"
+    class="pt-24 px-4 hidden md:hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 backdrop-blur-sm z-10 flex flex-col"
+  >
+    <div class="flex-1 flex flex-col justify-start items-end px-4 pb-8">
+      <div class="flex flex-col space-y-8 items-end">
+        <a href="#startups" class="text-white hover:text-gray-300 transition-colors py-3 text-2xl font-medium text-right">Startups</a>
+        <a href="#projects" class="text-white hover:text-gray-300 transition-colors py-3 text-2xl font-medium text-right">Projects</a>
+        <a href="#contact" class="text-white hover:text-gray-300 transition-colors py-3 text-2xl font-medium text-right">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script is:inline>
+  // Mobile menu toggle
+  (function () {
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenuCloseButton = document.getElementById("mobile-menu-close-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.getElementById("menu-icon");
+    const closeIcon = document.getElementById("close-icon");
+
+    if (!mobileMenuButton || !mobileMenu || !menuIcon || !closeIcon) return;
+
+    function toggleMenu(show) {
+      if (show) {
+        mobileMenu.classList.remove("hidden");
+        menuIcon.classList.add("hidden");
+        closeIcon.classList.remove("hidden");
+      } else {
+        mobileMenu.classList.add("hidden");
+        menuIcon.classList.remove("hidden");
+        closeIcon.classList.add("hidden");
+      }
+    }
+
+    mobileMenuButton.addEventListener("click", function () {
+      const isHidden = mobileMenu.classList.contains("hidden");
+      toggleMenu(isHidden);
+    });
+
+    // Close button in menu
+    if (mobileMenuCloseButton) {
+      mobileMenuCloseButton.addEventListener("click", function () {
+        toggleMenu(false);
+      });
+    }
+
+
+    // Close menu when clicking on a link
+    const menuLinks = mobileMenu.querySelectorAll("a");
+    menuLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        toggleMenu(false);
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function (e) {
+      const target = e.target;
+      if (target && !mobileMenuButton.contains(target) && !mobileMenu.contains(target)) {
+        toggleMenu(false);
+      }
+    });
+  })();
+</script>
+

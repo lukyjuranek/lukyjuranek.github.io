@@ -27,6 +27,9 @@ const { title } = Astro.props;
   </head>
   <body class="font-avenir">
     <slot />
+    <footer class="py-8 px-4 text-center">
+      <p class="text-gray-400 text-sm">© {new Date().getFullYear()} Lukas Juranek</p>
+    </footer>
   </body>
 </html>
 
@@ -74,10 +77,11 @@ const { title } = Astro.props;
   }
 
   .project-card-shadow {
-    box-shadow: 0px 4px 39px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.1); */
   }
   .bg-secondary {
     background-color: #191919;
   }
+
 
 </style>
